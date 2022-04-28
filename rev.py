@@ -125,7 +125,7 @@ except KeyboardInterrupt:
     write(var="~", color=y, data="Err0r: User Interrupted!")
 
 except Exception as e:
-    write(var="#", color=r, data="Err0r: Kindly Report the err0r below to An0n3xPloiTeR :) (If Your Internet's Working ;)\n\"\"\"\n" + str(e) + "\n\"\"\"")
+    write(var="#", color=r, data="Err0r: Kindly Report the err0r below to brian :) (If Your Internet's Working ;)\n\"\"\"\n" + str(e) + "\n\"\"\"")
 
 print(Footer)
 
