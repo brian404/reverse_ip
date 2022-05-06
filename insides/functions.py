@@ -21,11 +21,11 @@ _headers = {
 
 empty_Website = "\n\t{red}[=] Please Enter A Website :/\n\t\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
 
-wrong_URL = "\n\t{red}[=] Please Enter a Valid And Correct URL (i.e, hackthissite.org, hack.me)\n\t\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
+wrong_URL = "\n\t{red}[=] Please Enter a Valid And Correct URL (i.e, hackthissite.org, hack.me)\n\t\t{cyan}~ brian :)".format(red=r, cyan=c)
 
-str_Index = "\n\t{red}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
+str_Index = "\n\t{red}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t\t{cyan}~ Brian :)".format(red=r, cyan=c)
 
-val_Select = "\t{}[$] Please Use The Index Value From The List\n\t\t[+] Not By Your Own :/\n\t\t\t ~ An0n 3xPloiTeR  \n".format(r)
+val_Select = "\t{}[$] Please Use The Index Value From The List\n\t\t[+] Not By Your Own :/\n\t\t\t ~ Brian_  \n".format(r)
 
 def webNotEmpty(website):
     """
