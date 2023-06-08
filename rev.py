@@ -82,8 +82,15 @@ try:
         reverseViaHT(website)
 
     else:
-        write(var="~", color=y, data="Please select a valid option!")
+        write(var="~", color=c, data="Usage: python " + argv[0] + " --all hackthissite.org")
 
-except:
-    write(var="~", color=y, data="Please specify a target website!")
+except KeyboardInterrupt:
+    write(var="~", color=y, data="Error: User Interrupted!")
 
+except Exception as e:
+    write(var="#", color=r, data="Error: Kindly report the error below to brian :)\n\"\"\"\n" + str(e) + "\n\"\"\"")
+
+print(Footer)
+
+# ~ See Ya :)
+# ~ brian404:) :)
