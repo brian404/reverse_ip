@@ -33,7 +33,7 @@ def reverseViaHT(website):
         for _links in _list:
             if len(_links) != 0:
                 domain = _links.strip("[]")  # Remove square brackets
-                write(var=" ", color=g, data=domain)
+                write(var=" ", color=g, data=f"[ ] {domain}")
     else:
         write(var="@",
               color=r,
@@ -74,11 +74,11 @@ except:
 
 try:
     if options.hackertarget:
-        heading(heading="Doing Reverse IP", website=website, afterWebHead=" Via HT <3", color=c)
+        heading(heading="Doing Reverse IP", website=website, afterWebHead=" Via HT <3", color=g)
         reverseViaHT(website)
 
     elif options.all:
-        heading(heading="Doing Reverse IP", website=website, afterWebHead=" Via HT <3", color=c)
+        heading(heading="Doing Reverse IP", website=website, afterWebHead=" Via HT <3", color=g)
         reverseViaHT(website)
 
     else:
