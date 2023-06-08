@@ -1,4 +1,3 @@
-
 from insides import *
 from sys import argv
 import requests
@@ -33,7 +32,7 @@ def reverseViaHT(website):
         _list = request.strip("").split("\n")
         for _links in _list:
             if len(_links) != 0:
-                domain = re.sub(r"\[|\]", "", _links.strip())  # Remove square brackets and leading/trailing whitespace
+                domain = re.sub(r"\[|\]|\s", "", _links.strip())  # Remove square brackets and whitespace
                 write(var=" ", color=g, data=domain)
     else:
         write(var="@",
@@ -94,4 +93,4 @@ except Exception as e:
 print(Footer)
 
 # ~ See Ya :)
-# ~ brian404 :) :)
+# ~ brian4044 :) :)
