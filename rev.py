@@ -31,8 +31,9 @@ def reverseViaHT(website):
     if len(request) != 5:
         _list = request.strip("").split("\n")
         for _links in _list:
-            if len(_links) != 0:
-                write(var=" ", color=g, data=_links)
+            if len(_links) != 0 and "[" not in _links and "]" not in _links:
+                domain = _links.strip()  # Remove leading/trailing whitespace
+                write(var=" ", color=g, data=domain)
     else:
         write(var="@",
               color=r,
@@ -49,7 +50,7 @@ def heading(heading, website, color, afterWebHead):
 ################################ Args ################################
 
 _usage = "python " + argv[0] + " --all hackthissite.org"
-_version = "[" + c + "~" + w + "] " + g + "Version: " + c + "2.0"
+_version = "[" + c + "~" + w + "] " + g + "Version: 2.0"
 parser = optparse.OptionParser(usage=_usage, version=_version, conflict_handler="resolve")
 general = optparse.OptionGroup(parser, y + 'Basic Help')
 general.add_option('-h', '--help', action='help', dest='help', help='Shows the help for the program.')
@@ -81,15 +82,8 @@ try:
         reverseViaHT(website)
 
     else:
-        write(var="~", color=c, data="Usage: python " + argv[0] + " --all hackthissite.org")
+        write(var="~", color=y, data="Please select a valid option!")
 
-except KeyboardInterrupt:
-    write(var="~", color=y, data="Error: User Interrupted!")
+except:
+    write(var="~", color=y, data="Please specify a target website!")
 
-except Exception as e:
-    write(var="#", color=r, data="Error: Kindly report the error below to brian :) (If your internet is working ;)\n\"\"\"\n" + str(e) + "\n\"\"\"")
-
-print(Footer)
-
-# ~ See Ya :)
-# ~ brian4044 :) 
