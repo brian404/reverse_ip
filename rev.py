@@ -29,10 +29,10 @@ def reverseViaHT(website):
 
     request = requests.get(combo, headers=functions._headers, timeout=5).text
     if len(request) != 5:
-        _list = request.strip("").split("\n")
+        _list = request.strip().split("\n")
         for _links in _list:
             if len(_links) != 0:
-                domain = re.sub(r"\[|\]|\s", "", _links.strip())  # Remove square brackets and whitespace
+                domain = _links.strip("[]")  # Remove square brackets
                 write(var=" ", color=g, data=domain)
     else:
         write(var="@",
